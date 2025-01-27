@@ -31,9 +31,12 @@
 <div class="overlay"></div>
 
 <div class="main-content">
-  <video autoplay loop muted class="background-gradient">
+  <video autoplay loop muted playsinline class="background-gradient">
     <source src="gradient-animation-full-compressed.mp4" type="video/mp4">
+    <!-- Fallback for unsupported browsers -->
+    <img src="/images/project1.png" alt="Background gradient">
   </video>
+
 
   <div class="info-tab" id="info">
     <!-- USE CSS SPRITE TECHNIQUE -->

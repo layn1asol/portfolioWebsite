@@ -33,6 +33,7 @@ body {
     height: 100vh; /* Ensures the video spans the full viewport height */
     object-fit: cover; /* Ensures the video covers the entire viewport without distortion */
     z-index: -2; /* Keeps the video behind other elements */
+    pointer-events: none; /* This ensures that user interactions, such as long-pressing, are ignored. */
 }
 
 header, .socials {
@@ -76,8 +77,8 @@ header div.menu {
 }
 
 .logo2 {
-    width: auto; /* Ensure it scales naturally */
-    max-height: 60px; /* Limit height for better layout */
+    max-width: 4em; /* Ensure it scales naturally */
+    max-height: 1.3em; /* Limit height for better layout */
 }
 
 .menu {
@@ -102,6 +103,7 @@ header div.menu {
     width: 10em;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     transition: opacity 0.1s ease-in-out, visibility 0s 0.1s;
+    user-select: none;
 }
 
 .menu .dropdown.show {
@@ -133,9 +135,11 @@ header div.menu {
 .menu .dropdown li {
     padding: 20px;
     text-align: left; /* Ensure text stays aligned left */
+    user-select: none; /* Prevent selection on individual items */
 }
 
 .menu .dropdown li a {
+    user-select: none; /* Prevent selection on individual items */
     font-size: 1.5rem;
     text-decoration: none;
     color: #adcaff;
@@ -417,7 +421,7 @@ em {
     color: #ffffff;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 1em;
     justify-content: center;
     padding-bottom: 150px;
 }
@@ -427,7 +431,6 @@ em {
     max-width: 8.5em;
     min-width: 5em;
     height: 13em;
-    margin-bottom: 40px;
     padding: 20px;
     align-items: center;
     justify-content: center;
@@ -474,11 +477,16 @@ em {
     }
 
     .logo2 {
-        width: 70%;
+        max-width: 2.3em;
+        max-height: 1em;
     }
 
     .menu p::before, .menu p::after {
         height: 3px;
+    }
+
+    .menu .dropdown li a {
+        color: #008cff;
     }
 
     .menu .dropdown {
@@ -532,7 +540,7 @@ em {
 
     .projects-container {
         flex-direction: row;
-        gap: 0.2em;
+        gap: 0.5em;
         padding-bottom: 20px;
         margin-left: 0.3em;
         margin-right: 0.3em;
