@@ -11,7 +11,7 @@ html, body {
   height: 100vh;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+  /* -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
   /* overscroll-behavior: none; /* Prevents bounce effect */
 }
 
