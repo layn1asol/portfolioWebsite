@@ -22,26 +22,32 @@
         <li><a href="#info">about me.</a></li>
         <li><a href="#projects">my projects.</a></li>
         <li><a href="#message">message me.</a></li>
-        <li><a href="#socials">socials.</a></li>
+        <li><a href="#links">links.</a></li>
       </ul>
     </div>
 </header>
 <div class="overlay"></div>
 
 <div class="main-content">
+  <!-- video was here before -->
   <video autoplay loop muted playsinline class="background-gradient">
     <source src="gradient-animation-full-compressed.mp4" type="video/mp4">
-    <!-- Fallback for unsupported browsers -->
     <img src="/images/project1.png" alt="Background gradient">
   </video>
 
-
   <div class="info-tab" id="info">
+
     <!-- USE CSS SPRITE TECHNIQUE -->
+    <!--
     <div class="bg-elements-info">
       <div class="element1"></div>
       <div class="element2"></div>
-    </div>
+    </div> -->
+
+    <video autoplay loop muted playsinline class="background-gradient">
+      <source src="gradient-animation-full-compressed.mp4" type="video/mp4">
+      <img src="/images/project1.png" alt="Background gradient">
+    </video>
 
     <div class="tab-bg">
       <div class="info-tab-container">
@@ -118,12 +124,50 @@
 
 
 
+  <div class="message-tab" id="message">
+
+
+    <div class="bg-elements-info">
+      <div class="element1"></div>
+      <div class="element2"></div>
+    </div>
+
+    <div class="tab-bg">
+      <div class="message-tab-container">
+        <div class="message-text">
+          <h2>Send me a message<em>!</em></h2>
+          <div class="message-subtext">
+            Got a question or proposal, or just want to say hello? Go ahead.
+            I will reply back on your email as soon as I can!
+          </div>
+        </div>
+
+        <form class="message-panel" id="message-panelID">
+          <div class="form-row1">
+            <div class="form-tab">
+              <label for="message-name" class="form-label">Name</label>
+              <input type="text" class="form-input" id="message-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-tab">
+              <label for="message-email" class="form-label">Email Address</label>
+              <input type="email" class="form-input" id="message-email" placeholder="Enter your email" required>
+            </div>
+          </div>
+          <div class="form-tab">
+            <label for="message-question" class="form-label">Your message</label>
+            <textarea class="message-question form-input" id="message-question" placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?" rows="2" minlength="30" required></textarea>
+          </div>
+        </form>
+        <button type="submit" class="btn-submit-message">SUBMIT</button>
+      </div>
+    </div>
+  </div>
 
 
 </div>
 
-<div class="socials" id="socials">
-  <p>my socials</p>
+<div class="links" id="links">
+  <p>my links</p>
   <div class="logos">
     <a href="https://github.com/layn1asol" target="_blank">
       <img class="github" src="images/logos/github-mark.png" alt="Github logo" aria-label="GitHub">
