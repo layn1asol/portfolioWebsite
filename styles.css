@@ -379,6 +379,8 @@ header div.logo, header div.menu {
 }
 
 em {
+  background: none;
+  -webkit-text-fill-color: white;
   color: white;
   font-style: normal;
 }
@@ -521,9 +523,8 @@ em {
   justify-content: center; /* Center content horizontally */
   gap: 2em;
   flex-shrink: 1;
-  max-width: 80%;
-  /*padding-right: 20em; /* !!!!!!*/
-  /*padding-left: 20em; /* !!!!!!*/
+  max-width: 100%;
+  padding: 0 clamp(0em, 5vw, 7em);
 }
 
 .message-text {
@@ -538,6 +539,13 @@ em {
 }
 
 .message-tab h2{
+  /* remove to remove gradient*/
+  background: linear-gradient(311deg,#5e9fed,#a7f0de,#f0f7d0,#477df1);
+  background-size: 240% 240%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 4s ease infinite;
+
   font-size: 4rem;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -572,6 +580,7 @@ em {
 }
 
 .form-tab {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -736,7 +745,7 @@ em {
 
   .menu .dropdown {
     top: 4em;
-    width: 16em;
+    width: 14em;
   }
 
   #info, #projects, #message, #links {
@@ -839,18 +848,22 @@ em {
   }
 
   .form-row1 {
+    width: 100%;
     flex-direction: column;
     gap: 1em;
   }
 
   .message-panel {
+    width: 90%;
     display: flex;
     align-items: center;
     gap: 1em;
   }
 
+
+
   .btn-submit-message {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 1em;
   }
 
