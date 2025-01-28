@@ -754,13 +754,11 @@ em {
   }
 
   #info, #projects, #message, #links {
-    scroll-margin-top: 4em; /* Matches header's default height */
+    scroll-margin-top: 0; /* Matches header's default height */
   }
 
 
-  .main-content {
-    margin-top: 4em;
-  }
+
 
   .info-tab {
     flex-direction: column;
