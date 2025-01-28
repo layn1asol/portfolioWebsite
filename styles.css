@@ -36,7 +36,10 @@ body {
     pointer-events: none; /* This ensures that user interactions, such as long-pressing, are ignored. */
 }
 
-
+a {
+    text-decoration: none;
+    color: white;
+}
 
 
 
@@ -247,8 +250,7 @@ header div.logo, header div.menu {
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     grid-row: 3 / 11;
-    padding-top: 4.6em;
-    padding-bottom: 4.6em;
+    padding: clamp(2em, 7vh, 7em) 0;
     color: #e7ffbb;
     display: flex;
     flex-direction: row;
@@ -654,7 +656,7 @@ em {
 .socials {
     padding: 3em clamp(0em, 5vw, 8em);
     color: #959595;
-    background-color: #292929;
+    background-color: #191919;
     grid-row: 23 / 25;
     display: flex;
     flex-direction: row;
@@ -670,7 +672,7 @@ em {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
 }
 
 .logos a {
@@ -683,8 +685,8 @@ em {
 
 .logos img {
     filter: brightness(0) saturate(100%); /* Makes logos black */
-    width: 5em; /* Adjust based on original size (original/3) */
-    height: 5em;
+    width: 4em; /* Adjust based on original size (original/3) */
+    height: 4em;
 }
 
 .logos a:hover {
