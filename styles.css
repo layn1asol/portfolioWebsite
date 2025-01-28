@@ -243,7 +243,7 @@ map { border : none }
 
 
 .main-content {
-  margin-top: 6em;
+  /*margin-top: 6em;*/
   display: grid;
   grid-column: 1 / 25;
 }
@@ -754,11 +754,13 @@ em {
   }
 
   #info, #projects, #message, #links {
-    scroll-margin-top: 0; /* Matches header's default height */
+    scroll-margin-top: 4em; /* Matches header's default height */
   }
 
 
-
+  .main-content {
+    /*margin-top: 4em;*/
+  }
 
   .info-tab {
     flex-direction: column;
