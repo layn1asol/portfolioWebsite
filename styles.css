@@ -243,7 +243,7 @@ map { border : none }
 
 
 .main-content {
-  /*margin-top: 6em;*/
+  margin-top: 6em;
   display: grid;
   grid-column: 1 / 25;
 }
@@ -759,7 +759,7 @@ em {
 
 
   .main-content {
-    /*margin-top: 4em;*/
+    margin-top: 4em;
   }
 
   .info-tab {
