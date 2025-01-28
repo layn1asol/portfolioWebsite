@@ -76,7 +76,7 @@ header {
     top: 0;
     z-index: 100;
     transition: transform 0.3s ease-in-out;
-    padding: 0 clamp(0em, 5vw, 7em); /* Move margin to padding */
+    padding: 0 clamp(0em, 5vw, 8em); /* Move margin to padding */
 }
 
 /*
@@ -323,7 +323,7 @@ header div.logo, header div.menu {
 }
 
 .Hello {
-    font-size: clamp(2rem, 5vw, 3rem); /* Adjust min, preferred, and max sizes */
+    font-size: clamp(3rem, 5vw, 3.5rem); /* Adjust min, preferred, and max sizes */
     background: linear-gradient(311deg,#5e9fed,#a7f0de,#f0f7d0,#477df1);
     background-size: 240% 240%;
     -webkit-background-clip: text;
@@ -417,8 +417,8 @@ em {
 }
 
 .projects-tab h2{
-    font-size: 5rem;
-    margin: 1.3em 0;
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin: clamp(0.5em, 5vw, 1.3em) 0;
 }
 
 .projects-container {
@@ -652,13 +652,14 @@ em {
 
 
 .socials {
-    padding: 3em 1.5em;
+    padding: 3em clamp(0em, 5vw, 8em);
     color: #959595;
     background-color: #292929;
     grid-row: 23 / 25;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 2em;
 }
 
 .socials p {
@@ -668,7 +669,8 @@ em {
 .logos {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    align-items: center;
+    gap: 2em;
 }
 
 .logos a {
@@ -676,27 +678,16 @@ em {
     width: fit-content;    /* Shrinks to fit the image size */
     height: fit-content;   /* Same for height */
     line-height: 0;        /* Removes extra spacing if present */
-}
-
-
-.github {
-    width: 17%;
-    height: auto;
     transition: 0.2s ease-out;
 }
 
-.linkedin {
-    width: 20%;
-    height: auto;
-    transition: 0.2s ease-out;
+.logos img {
+    filter: brightness(0) saturate(100%); /* Makes logos black */
+    width: 5em; /* Adjust based on original size (original/3) */
+    height: 5em;
 }
 
-.github:hover {
-    filter: invert(55%) brightness(90%);
-    transform: scale(1.1);
-}
-
-.linkedin:hover {
+.logos a:hover {
     filter: invert(55%) brightness(90%);
     transform: scale(1.1);
 }
@@ -721,7 +712,7 @@ em {
 
 @media screen and (max-width: 768px) {
     header {
-        padding: 0 clamp(0.5em, 3vw, 2em); /* Adjust padding for mobile */
+        padding: 0 clamp(1.2em, 3vw, 2em); /* Adjust padding for mobile */
         height: 4em;
     }
 
@@ -794,7 +785,7 @@ em {
     .projects-container {
         flex-direction: row;
         gap: 1em;
-        margin: 0 0.6em;
+        margin-bottom: 2em;
     }
 
     .project {
@@ -829,5 +820,16 @@ em {
 
     .btn-submit-message {
         width: 80%;
+    }
+
+    .socials {
+        flex-direction: column;
+        padding: 0.6em 0.6em;
+        gap: 1em;
+    }
+
+    .logos img {
+        width: clamp(3em, 5vw, 5em); /* Adjust based on original size (original/3) */
+        height: clamp(3em, 5vw, 5em)
     }
 }
