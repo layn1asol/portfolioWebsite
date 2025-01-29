@@ -76,7 +76,7 @@ header {
   left: 0;
   right: 0;
   height: 6em;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
   transition: transform 0.3s ease-in-out;
@@ -242,6 +242,7 @@ map { border : none }
 
 
 .main-content {
+  margin-top: 6em;
   display: grid;
   grid-column: 1 / 25;
   min-height: calc(100vh - 6em); /* Ensure minimum height */
@@ -736,7 +737,6 @@ em {
   }
 
   header {
-    position: sticky; /* Maintain sticky behavior */
     padding: 0 clamp(1.2em, 3vw, 2em); /* Adjust padding for mobile */
     height: 4em;
   }
@@ -767,6 +767,10 @@ em {
   }
 
 
+
+  .main-content {
+    margin-top: 4em;
+  }
 
 
   .info-tab {
