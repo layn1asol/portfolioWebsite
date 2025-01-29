@@ -7,9 +7,10 @@
 }
 
 html, body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh; /* Changed from fixed height */
   overflow-x: hidden;
+  overflow-y: auto; /* Enable vertical scrolling */
   scroll-behavior: smooth;
   /* -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
   /* overscroll-behavior: none; /* Prevents bounce effect */
@@ -22,8 +23,6 @@ body {
   display: grid;
   grid-template-rows: repeat(24,auto);
   grid-template-columns: repeat(24, 1fr);
-  width: 100%;
-  min-height: 100%;
   background-color: #292929;
 }
 
@@ -138,7 +137,7 @@ map { border : none }
 .overlay {
   opacity: 0;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -246,6 +245,8 @@ map { border : none }
   margin-top: 6em;
   display: grid;
   grid-column: 1 / 25;
+  min-height: calc(100vh - 6em); /* Ensure minimum height */
+  height: auto;
 }
 
 .info-tab {
@@ -730,6 +731,11 @@ em {
 
 
 @media screen and (max-width: 768px) {
+  html, body {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+
   header {
     padding: 0 clamp(1.2em, 3vw, 2em); /* Adjust padding for mobile */
     height: 4em;
@@ -755,12 +761,21 @@ em {
 
   #info, #projects, #message, #links {
     scroll-margin-top: 4em; /* Matches header's default height */
+    position: relative;
+    overflow: visible;
+    height: auto;
   }
+
+  .overlay {
+    position: fixed;
+  }
+
 
 
   .main-content {
     margin-top: 4em;
   }
+
 
   .info-tab {
     flex-direction: column;
@@ -805,6 +820,7 @@ em {
     flex-direction: row;
     gap: 1em;
     margin-bottom: 2em;
+    overflow: visible;
   }
 
   .project {
@@ -884,5 +900,14 @@ em {
   .logos img {
     width: clamp(3em, 5vw, 5em); /* Adjust based on original size (original/3) */
     height: clamp(3em, 5vw, 5em)
+  }
+
+  .info-tab,
+  .projects-tab,
+  .message-tab,
+  .links {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
   }
 }
