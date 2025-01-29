@@ -766,6 +766,10 @@ em {
     height: auto;
   }
 
+  .overlay {
+    position: fixed;
+  }
+
 
 
   .main-content {
